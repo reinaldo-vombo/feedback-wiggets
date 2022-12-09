@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import { ChatTeardropDots } from 'phosphor-react'
 import { Popover } from '@headlessui/react'
 import { WidgetForm } from './widgetForm'
+import { Home } from './home'
 
 
 export function Widget(){
    return (
+      <>
+      <Home/>
       <Popover className='absolute bottom-4 right-4 md:bottom-10 md:right-8 flex flex-col items-end'>
          <Popover.Panel>
             <WidgetForm/>
@@ -19,6 +22,8 @@ export function Widget(){
             </span>
          </Popover.Button>
       </Popover>
+      </>
+      
    )  
    
 }
